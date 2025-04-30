@@ -46,7 +46,7 @@ DB_DIR_NAME_ERROR.mkdir(parents=True, exist_ok=True)
 
 DB_FILE_NAME_ERROR = str(DB_DIR_NAME_ERROR / "database_error.sqlite")
 
-URL = "https://bash.im/random"
+URL = "https://xn--80abh7bk0c.xn--p1ai/random"
 USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0"
 
 ERROR_TEXT = "Возникла какая-то проблема. Попробуйте повторить запрос или попробовать чуть позже..."
