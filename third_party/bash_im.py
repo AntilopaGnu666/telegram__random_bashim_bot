@@ -155,7 +155,7 @@ class Quote:
         )
 
         # У некоторых цитат не указан рейтинг, выглядит как: ...
-        # Например, в https://xn--80abh7bk0c.xn--p1ai//quote/416789
+        # Например, в https:/xn--80abh7bk0c.xn--p1ai/quote/416789
         try:
             rating = int(quote_el.select_one('.quote__total').get_text())
         except:
@@ -297,7 +297,7 @@ def parser_health_check(raise_error=False) -> Optional[str]:
         quote = Quote.parse_from(quote_id)
         _test_quote(quote, quote_id)
 
-        quote = Quote.parse_from(f'https://xn--80abh7bk0c.xn--p1ai//quote/{quote_id}')
+        quote = Quote.parse_from(f'https:/xn--80abh7bk0c.xn--p1ai/quote/{quote_id}')
         _test_quote(quote, quote_id)
 
     except requests.exceptions.HTTPError as e:
@@ -324,17 +324,17 @@ if __name__ == '__main__':
     print('Total pages:', total_pages)
     print()
 
-    print(Quote.parse_from('https://xn--80abh7bk0c.xn--p1ai//quote/414617'))
-    # Quote(id=414617, url=https://xn--80abh7bk0c.xn--p1ai//quote/414617, text(96)='zvizda: диета достигла той упо...', date=07.12.2011, rating=11843, comics_urls=['https://xn--80abh7bk0c.xn--p1ai//strip/20190828', 'https://xn--80abh7bk0c.xn--p1ai//strip/20200408'])
+    print(Quote.parse_from('https:/xn--80abh7bk0c.xn--p1ai/quote/414617'))
+    # Quote(id=414617, url=https:/xn--80abh7bk0c.xn--p1ai/quote/414617, text(96)='zvizda: диета достигла той упо...', date=07.12.2011, rating=11843, comics_urls=['https:/xn--80abh7bk0c.xn--p1ai/strip/20190828', 'https:/xn--80abh7bk0c.xn--p1ai/strip/20200408'])
 
     print(Quote.parse_from(414617))
-    # Quote(id=414617, url=https://xn--80abh7bk0c.xn--p1ai//quote/414617, text(96)='zvizda: диета достигла той упо...', date=07.12.2011, rating=11849, comics_urls=['https://xn--80abh7bk0c.xn--p1ai//strip/20190828', 'https://xn--80abh7bk0c.xn--p1ai//strip/20200408'])
+    # Quote(id=414617, url=https:/xn--80abh7bk0c.xn--p1ai/quote/414617, text(96)='zvizda: диета достигла той упо...', date=07.12.2011, rating=11849, comics_urls=['https:/xn--80abh7bk0c.xn--p1ai/strip/20190828', 'https:/xn--80abh7bk0c.xn--p1ai/strip/20200408'])
 
-    print(Quote.parse_from('https://xn--80abh7bk0c.xn--p1ai//quote/454588'))
-    # Quote(id=454588, url=https://xn--80abh7bk0c.xn--p1ai//quote/454588, text(97)='- К человеку с ножом обращаютс...', date=20.02.2019, rating=1351, comics_urls=[])
+    print(Quote.parse_from('https:/xn--80abh7bk0c.xn--p1ai/quote/454588'))
+    # Quote(id=454588, url=https:/xn--80abh7bk0c.xn--p1ai/quote/454588, text(97)='- К человеку с ножом обращаютс...', date=20.02.2019, rating=1351, comics_urls=[])
 
-    print(Quote.parse_from('https://xn--80abh7bk0c.xn--p1ai//quote/443711'))
-    # Quote(id=443711, url=https://xn--80abh7bk0c.xn--p1ai//quote/443711, text(402)='Звонит щас абонент, говорит ин...', date=28.02.2017, rating=5410, comics_urls=[])
+    print(Quote.parse_from('https:/xn--80abh7bk0c.xn--p1ai/quote/443711'))
+    # Quote(id=443711, url=https:/xn--80abh7bk0c.xn--p1ai/quote/443711, text(402)='Звонит щас абонент, говорит ин...', date=28.02.2017, rating=5410, comics_urls=[])
 
     print()
 
@@ -347,14 +347,14 @@ if __name__ == '__main__':
         # print('\n' + '-' * 100 + '\n')
     """
     Quotes(25):
-      1. Quote(id=402770, url=https://xn--80abh7bk0c.xn--p1ai//quote/402770, text(224)='Владивосток. Январь.\nНочь посл...', date=08.03.2009, rating=26693, comics_urls=[])
-      2. Quote(id=411254, url=https://xn--80abh7bk0c.xn--p1ai//quote/411254, text(159)='marikus: :(...\nazon: чё рожа к...', date=23.05.2011, rating=8145, comics_urls=[])
-      3. Quote(id=439536, url=https://xn--80abh7bk0c.xn--p1ai//quote/439536, text(179)='<Faumi> Guest42, мне как-то ка...', date=31.05.2016, rating=3950, comics_urls=[])
+      1. Quote(id=402770, url=https:/xn--80abh7bk0c.xn--p1ai/quote/402770, text(224)='Владивосток. Январь.\nНочь посл...', date=08.03.2009, rating=26693, comics_urls=[])
+      2. Quote(id=411254, url=https:/xn--80abh7bk0c.xn--p1ai/quote/411254, text(159)='marikus: :(...\nazon: чё рожа к...', date=23.05.2011, rating=8145, comics_urls=[])
+      3. Quote(id=439536, url=https:/xn--80abh7bk0c.xn--p1ai/quote/439536, text(179)='<Faumi> Guest42, мне как-то ка...', date=31.05.2016, rating=3950, comics_urls=[])
       ...
-     22. Quote(id=397851, url=https://xn--80abh7bk0c.xn--p1ai//quote/397851, text(193)='~lotos~:Ржунимагу, стою в мага...', date=15.07.2008, rating=21320, comics_urls=['https://xn--80abh7bk0c.xn--p1ai//strip/20081022'])
-     23. Quote(id=217468, url=https://xn--80abh7bk0c.xn--p1ai//quote/217468, text(687)='*****:\nНастроил в квартире сет...', date=13.05.2007, rating=5847, comics_urls=[])
-     24. Quote(id=404924, url=https://xn--80abh7bk0c.xn--p1ai//quote/404924, text(279)='Воланд: Дорогая Лиза, я понима...', date=30.10.2009, rating=8788, comics_urls=[])
-     25. Quote(id=417637, url=https://xn--80abh7bk0c.xn--p1ai//quote/417637, text(166)='xxx: Блин. Нормальные люди, ко...', date=26.06.2012, rating=7810, comics_urls=[])
+     22. Quote(id=397851, url=https:/xn--80abh7bk0c.xn--p1ai/quote/397851, text(193)='~lotos~:Ржунимагу, стою в мага...', date=15.07.2008, rating=21320, comics_urls=['https:/xn--80abh7bk0c.xn--p1ai/strip/20081022'])
+     23. Quote(id=217468, url=https:/xn--80abh7bk0c.xn--p1ai/quote/217468, text(687)='*****:\nНастроил в квартире сет...', date=13.05.2007, rating=5847, comics_urls=[])
+     24. Quote(id=404924, url=https:/xn--80abh7bk0c.xn--p1ai/quote/404924, text(279)='Воланд: Дорогая Лиза, я понима...', date=30.10.2009, rating=8788, comics_urls=[])
+     25. Quote(id=417637, url=https:/xn--80abh7bk0c.xn--p1ai/quote/417637, text(166)='xxx: Блин. Нормальные люди, ко...', date=26.06.2012, rating=7810, comics_urls=[])
     """
     print()
 
@@ -371,7 +371,7 @@ if __name__ == '__main__':
     print(f'Quotes from {page} page: ({len(quotes)}), first #{quotes[0].id}, last #{quotes[-1].id}')
     print()
 
-    quote = Quote.parse_from('https://xn--80abh7bk0c.xn--p1ai//quote/414617')
+    quote = Quote.parse_from('https:/xn--80abh7bk0c.xn--p1ai/quote/414617')
     files = quote.download_comics()
     print(f'Files ({len(files)}):')
     for i, file_name in enumerate(files, 1):
